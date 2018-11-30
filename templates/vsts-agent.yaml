@@ -36,6 +36,14 @@ spec:
             value: {{ .vstsAgentName | default "$HOSTNAME" }}
           - name: VSTS_WORK
             value: {{ .vstsWorkspace | default "/workspace" }}
+          {{- if .proxy }}
+          - name: http_proxy
+            value: {{ .proxy }}
+          - name: https_proxy
+            value: {{ .proxy }}
+          - name: VSTS_HTTP_PROXY
+            value: {{ .proxy }}
+            {{- end }}
           {{- end }}
         volumeMounts:
           - name: docker-socket

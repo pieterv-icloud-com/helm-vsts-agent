@@ -17,6 +17,7 @@ The following tables lists the configurable parameters of the `vsts-agent` chart
 | `image.tag`                       | Specify image tag                     | `latest`                                                  |
 | `image.pullSecrets`               | Specify image pull secrets            | `nil` (does not add image pull secrets to deployed pods)  |
 | `image.pullPolicy`                | Image pull policy                     | `Always`                                                  |
+`proxy`                   | Http proxy server to use                  |  |
 | `replicas`                        | Number of vsts-agent instaces started | `3`                                                       |
 | `resources.disk`                  | Size of the disk attached to the agent| `50Gi`                                                    |
 | `resources.storageclass`          | Specify storageclass used in kubernetes| `default`                                                    |
